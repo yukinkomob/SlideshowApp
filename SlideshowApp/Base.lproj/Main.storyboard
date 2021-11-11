@@ -28,7 +28,7 @@
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="UFo-DT-h16">
-                                <rect key="frame" x="66.5" y="499.5" width="281" height="30"/>
+                                <rect key="frame" x="89.5" y="499.5" width="235" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqF-jH-aTu">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
@@ -45,29 +45,38 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bet-V2-V3U">
-                                        <rect key="frame" x="204" y="0.0" width="77" height="30"/>
-                                        <state key="normal" title="再生／停止"/>
+                                        <rect key="frame" x="204" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="再生"/>
                                         <connections>
                                             <action selector="doSlideShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wPj-P9-qg4"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PjB-L1-0a0">
+                                <rect key="frame" x="107" y="454.5" width="200" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="nUZ-r7-bHW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="7LD-0B-kmG"/>
+                            <constraint firstItem="PjB-L1-0a0" firstAttribute="leading" secondItem="nUZ-r7-bHW" secondAttribute="leading" id="Cfu-Pp-Ifj"/>
                             <constraint firstItem="UFo-DT-h16" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IjW-yZ-T1C"/>
+                            <constraint firstItem="PjB-L1-0a0" firstAttribute="top" secondItem="nUZ-r7-bHW" secondAttribute="bottom" constant="5" id="dVE-zK-aS7"/>
                             <constraint firstItem="UFo-DT-h16" firstAttribute="top" secondItem="nUZ-r7-bHW" secondAttribute="bottom" constant="50" id="gKZ-X3-4dl"/>
                             <constraint firstItem="nUZ-r7-bHW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qnG-5G-9Pu"/>
+                            <constraint firstItem="PjB-L1-0a0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s2N-3z-HAh"/>
+                            <constraint firstItem="PjB-L1-0a0" firstAttribute="trailing" secondItem="nUZ-r7-bHW" secondAttribute="trailing" id="u9X-1S-Kuh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="nUZ-r7-bHW" id="nDz-w7-giq"/>
                         <outlet property="nextButton" destination="lqF-jH-aTu" id="4Xh-ol-102"/>
                         <outlet property="prevButton" destination="i06-tQ-c5h" id="7q4-dJ-odq"/>
+                        <outlet property="slideShowButton" destination="Bet-V2-V3U" id="5H1-6r-Qtk"/>
+                        <outlet property="slideShowProgress" destination="PjB-L1-0a0" id="ivr-30-Pp2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

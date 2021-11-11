@@ -12,12 +12,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var slideShowButton: UIButton!
+    @IBOutlet weak var slideShowProgress: UIProgressView!
     
     let imageArray = ["night-soldier", "sea-moon", "tsunami"]
     var imageIndex = 0
     
     var timer: Timer!
-    var timer_sec: Float = 0
+    
+    var progress_timer: Timer!
+    var progress_value: Float = 0
+    var progress_divisions: Double = 50.0
     
     @IBAction func unwind(_segue: UIStoryboardSegue) {
         
@@ -62,21 +67,35 @@ class ViewController: UIViewController {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateImage(_:)), userInfo: nil, repeats: true)
             nextButton.isEnabled = false
             prevButton.isEnabled = false
+            slideShowButton.setTitle("停止", for: .normal)
+            slideShowProgress.isHidden = false
+            if self.progress_timer == nil {
+                self.progress_value = 0.0
+                self.progress_timer = Timer.scheduledTimer(timeInterval: 2.0 / progress_divisions, target: self, selector: #selector(updateProgress(_:)), userInfo: nil, repeats: true)
+            }
         } else {
             self.timer.invalidate()
             self.timer = nil
             nextButton.isEnabled = true
             prevButton.isEnabled = true
+            slideShowButton.setTitle("再生", for: .normal)
+            slideShowProgress.isHidden = true
+            slideShowProgress.progress = 0.0
+            if self.progress_timer != nil {
+                self.progress_timer.invalidate()
+                self.progress_timer = nil
+            }
         }
     }
     
     @objc func updateImage(_ timer: Timer) {
         showNextImageX()
+        progress_value = 0
     }
-        
-//        @objc func updateTimer(_ timer: Timer) {
-//            self.timer_sec += 0.1
-//            self.timerLabel.text = String(format: "%.1f", self.timer_sec)
-//        }
+    
+    @objc func updateProgress(_ timer: Timer) {
+        progress_value += Float(1 / progress_divisions)
+        slideShowProgress.progress = progress_value
+    }
 }
 
