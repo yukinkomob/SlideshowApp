@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049DE7FA27402933003AAE3A /* sea-moon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 049DE7F727402933003AAE3A /* sea-moon.jpeg */; };
+		049DE7FB27402933003AAE3A /* night-soldier.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 049DE7F827402933003AAE3A /* night-soldier.jpeg */; };
+		049DE7FC27402933003AAE3A /* tsunami.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 049DE7F927402933003AAE3A /* tsunami.jpeg */; };
 		04AC9795273D4D2C006528D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC9794273D4D2C006528D8 /* AppDelegate.swift */; };
 		04AC9797273D4D2C006528D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC9796273D4D2C006528D8 /* SceneDelegate.swift */; };
 		04AC9799273D4D2C006528D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC9798273D4D2C006528D8 /* ViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		049DE7F727402933003AAE3A /* sea-moon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sea-moon.jpeg"; sourceTree = "<group>"; };
+		049DE7F827402933003AAE3A /* night-soldier.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "night-soldier.jpeg"; sourceTree = "<group>"; };
+		049DE7F927402933003AAE3A /* tsunami.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tsunami.jpeg; sourceTree = "<group>"; };
 		04AC9791273D4D2C006528D8 /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AC9794273D4D2C006528D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04AC9796273D4D2C006528D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +64,9 @@
 		04AC9793273D4D2C006528D8 /* SlideshowApp */ = {
 			isa = PBXGroup;
 			children = (
+				049DE7F827402933003AAE3A /* night-soldier.jpeg */,
+				049DE7F727402933003AAE3A /* sea-moon.jpeg */,
+				049DE7F927402933003AAE3A /* tsunami.jpeg */,
 				04AC9794273D4D2C006528D8 /* AppDelegate.swift */,
 				04AC9796273D4D2C006528D8 /* SceneDelegate.swift */,
 				04AC9798273D4D2C006528D8 /* ViewController.swift */,
@@ -127,9 +136,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049DE7FA27402933003AAE3A /* sea-moon.jpeg in Resources */,
 				04AC97A1273D4D2F006528D8 /* LaunchScreen.storyboard in Resources */,
+				049DE7FB27402933003AAE3A /* night-soldier.jpeg in Resources */,
 				04AC979E273D4D2F006528D8 /* Assets.xcassets in Resources */,
 				04AC979C273D4D2C006528D8 /* Main.storyboard in Resources */,
+				049DE7FC27402933003AAE3A /* tsunami.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
