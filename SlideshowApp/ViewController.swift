@@ -36,8 +36,9 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let imageViewController:ImageViewController = segue.destination as! ImageViewController
         imageViewController.imageName = imageArray[imageIndex]
+        stopSlideShow()
     }
-
+    
     @IBAction func showNextImage(_ sender: Any) {
         showNextImageX()
     }
@@ -64,6 +65,14 @@ class ViewController: UIViewController {
     
     @IBAction func doSlideShow(_ sender: Any) {
         if self.timer == nil {
+            startSlideShow()
+        } else {
+            stopSlideShow()
+        }
+    }
+    
+    func startSlideShow() {
+        if self.timer == nil {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateImage(_:)), userInfo: nil, repeats: true)
             nextButton.isEnabled = false
             prevButton.isEnabled = false
@@ -73,7 +82,11 @@ class ViewController: UIViewController {
                 self.progress_value = 0.0
                 self.progress_timer = Timer.scheduledTimer(timeInterval: 2.0 / progress_divisions, target: self, selector: #selector(updateProgress(_:)), userInfo: nil, repeats: true)
             }
-        } else {
+        }
+    }
+    
+    func stopSlideShow() {
+        if self.timer != nil {
             self.timer.invalidate()
             self.timer = nil
             nextButton.isEnabled = true
@@ -98,4 +111,3 @@ class ViewController: UIViewController {
         slideShowProgress.progress = progress_value
     }
 }
-
