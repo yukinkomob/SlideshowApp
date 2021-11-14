@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var slideShowButton: UIButton!
     @IBOutlet weak var slideShowProgress: UIProgressView!
     
-    let imageArray = ["night-soldier", "sea-moon", "tsunami"]
+    let imageArray = ["night-soldier.jpeg", "sea-moon.jpeg", "tsunami.jpeg"]
     var imageIndex = 0
     
     var timer: Timer!
